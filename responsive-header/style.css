@@ -1,0 +1,91 @@
+:root {
+  --background-color: #263343;
+  --text-color: #f8f9fa;
+  --accent-color: #f59f00;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.navbar-logo {
+  font-size: 24px;
+}
+.navbar-logo i {
+  color: var(--accent-color);
+}
+
+.navbar-menu {
+  display: flex;
+  padding-left: 0;
+}
+.navbar-menu li {
+  list-style: none;
+  padding: 8px 12px;
+}
+.navbar-menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 5px;
+}
+
+.navbar-contact {
+  display: flex;
+  padding-left: 0;
+}
+.navbar-contact li {
+  list-style: none;
+  padding: 8px 8px;
+}
+.navbar-contact a:hover {
+  color: var(--accent-color);
+}
+
+.navbar-toggle {
+  position: absolute;
+  right: 24px;
+  display: none;
+}
+.navbar-toggle i {
+  color: var(--accent-color);
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-logo {
+    align-self: flex-start;
+  }
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-contact {
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu.active,
+  .navbar-contact.active {
+    display: flex;
+  }
+}
